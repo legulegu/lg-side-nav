@@ -20,6 +20,12 @@ const NavGroup = props => {
       className={classNames("nav-group", props.className)}
       onClick={handleClick}
     >
+      <i
+        className={classNames({
+          "triangle-expanded": props.show,
+          "triangle-collapsed": !props.show
+        })}
+      />
       <div className="nav-group-title">{props.title}</div>
       <ul className={classNames("nav-group-item", { show: props.show })}>
         {clonedChildren}
