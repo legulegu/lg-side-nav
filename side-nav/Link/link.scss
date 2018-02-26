@@ -1,0 +1,18 @@
+.link {
+  text-decoration: none;
+  font-weight: normal;
+  display: inline-block;
+  width: 100%;
+  &:link {
+    color: #01579B;
+  }
+  &:visited {
+    color: #01579B;
+  }
+  &:hover {
+    color: #01579B;
+  }
+  &:active {
+    color: #01579B;
+  }
+}

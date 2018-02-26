@@ -1,0 +1,22 @@
+.nav-group{
+  background-color: #E3EDFA;
+  line-height: 32px;
+  color: #0277BD;
+  font-weight: bold;
+}
+
+.nav-group-title {
+  padding-left: 30px;
+}
+
+.nav-group-item {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  display: none;
+}
+
+.show {
+  display: block;
+}
