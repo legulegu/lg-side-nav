@@ -27,7 +27,7 @@ const NavGroup = props => {
         })}
       />
       <div className="lg-side-nav-group-title">{props.title}</div>
-      <ul className={classNames("lg-side-nav-group-item", { show: props.show })}>
+      <ul className={classNames("lg-side-nav-group-item", { show: props.show})}>
         {clonedChildren}
       </ul>
     </li>

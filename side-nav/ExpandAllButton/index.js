@@ -5,6 +5,7 @@ import "./expand-all-button.scss";
 const ExpandAllButton = props => {
   return (
     <button
+      onClick={props.handleExpandAllButtonClick}
       className={classNames("expand-all-button", props.className)}
       {...props}
     >
