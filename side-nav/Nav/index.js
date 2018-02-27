@@ -13,7 +13,7 @@ class Nav extends React.Component {
       openedGroup: props.openedGroup,
       selectedGroup: props.selectedGroup,
       selectedNavItem: props.selectedNavItem,
-      expandAll: props.expandAll || false
+      expandAll: props.expandAll
     };
     this.handleOnNavGroupClick = this.handleOnNavGroupClick.bind(this);
     this.handleNavItemClick = this.handleNavItemClick.bind(this);
@@ -21,11 +21,13 @@ class Nav extends React.Component {
   }
 
   handleOnNavGroupClick(e, index) {
-    if (index === this.state.openedGroup) {
-      this.setState({ openedGroup: 0 });
+    const openedGroup = Object.assign([], this.state.openedGroup);
+    if(openedGroup.indexOf(index) > -1) {
+      openedGroup.splice(openedGroup.indexOf(index), 1);
     } else {
-      this.setState({ openedGroup: index });
+      openedGroup.push(index);
     }
+    this.setState({ openedGroup }); 
   }
 
   handleNavItemClick(e, groupIndex, index) {
@@ -44,7 +46,7 @@ class Nav extends React.Component {
         navGroupIndex++;
         return React.cloneElement(child, {
           index: navGroupIndex,
-          show: this.state.openedGroup === navGroupIndex,
+          show: this.state.openedGroup.indexOf(navGroupIndex) > -1,
           expandAll: this.state.expandAll,
           selectedGroup: this.state.selectedGroup,
           selectedNavItem: this.state.selectedNavItem,
@@ -55,7 +57,7 @@ class Nav extends React.Component {
       if (child.type === NavItem) {
         navItemIndex++;
         return React.cloneElement(child, {
-          groupIndex: 0,
+          groupIndex: -1,
           index: navItemIndex,
           selected: this.state.selectedGroup === 0 && this.state.selectedNavItem === navItemIndex,
           handleNavItemClick: this.handleNavItemClick
@@ -74,5 +76,10 @@ class Nav extends React.Component {
     );
   }
 }
+
+Nav.defaultProps = {
+  expandAll: false,
+  openedGroup: []
+};
 
 export default Nav;
