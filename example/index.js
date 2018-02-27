@@ -4,6 +4,7 @@ import Nav from "../side-nav/Nav";
 import NavGroup from "../side-nav/NavGroup";
 import NavItem from "../side-nav/NavItem";
 import Link from "../side-nav/Link";
+import ButtonLink from "../side-nav/ButtonLink";
 
 import "./index.scss";
 
@@ -12,6 +13,9 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Nav className="customized-nav-container">
+          <NavItem path="/stockdata">
+            <ButtonLink href="https://legulegu.com/stockdata" target="_blank">展开全部</ButtonLink>
+          </NavItem>
           <NavItem path="/stockdata">
             <Link href="https://legulegu.com/stockdata" target="_blank">量化投资概述</Link>
           </NavItem>
