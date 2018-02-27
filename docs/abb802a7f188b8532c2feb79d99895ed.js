@@ -18104,8 +18104,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
@@ -18121,11 +18119,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ExpandAllButton = function ExpandAllButton(props) {
   return _react2.default.createElement(
     "button",
-    _extends({
-      onClick: props.handleExpandAllButtonClick,
+    {
+      onClick: props.handleToggleExpandAllButtonClick,
       className: (0, _classnames2.default)("lg-side-nav-expand-all-button", props.className)
-    }, props),
-    props.children
+    },
+    props.expandAll ? _react2.default.createElement(
+      _react2.default.Fragment,
+      null,
+      "\u6536\u8D77\u5168\u90E8 ",
+      _react2.default.createElement(
+        "span",
+        { className: "lg-side-nav-expand-all-button-icon-minus" },
+        "-"
+      )
+    ) : _react2.default.createElement(
+      _react2.default.Fragment,
+      null,
+      "\u5C55\u5F00\u5168\u90E8 ",
+      _react2.default.createElement(
+        "span",
+        { className: "lg-side-nav-expand-all-button-icon-plus" },
+        "+"
+      )
+    )
   );
 };
 
@@ -18252,7 +18268,8 @@ var Nav = function (_React$Component) {
         }
         if (child.type === _ExpandAllButton2.default) {
           return _react2.default.cloneElement(child, {
-            onClick: _this2.handleToggleExpandAllButtonClick
+            handleToggleExpandAllButtonClick: _this2.handleToggleExpandAllButtonClick,
+            expandAll: _this2.state.expandAll
           });
         }
       });
@@ -18379,11 +18396,7 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           _Nav2.default,
           { className: "customized-nav-container" },
-          _react2.default.createElement(
-            _ExpandAllButton2.default,
-            null,
-            "\u5C55\u5F00\u548C\u6536\u8D77\u5168\u90E8"
-          ),
+          _react2.default.createElement(_ExpandAllButton2.default, null),
           _react2.default.createElement(
             _NavItem2.default,
             { path: "/stockdata" },
@@ -18672,7 +18685,7 @@ var App = function (_React$Component) {
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("app"));
-},{"react":17,"react-dom":16,"../side-nav/Nav":6,"../side-nav/NavGroup":5,"../side-nav/NavItem":8,"../side-nav/Link":7,"../side-nav/ExpandAllButton":9,"./index.scss":3}],61:[function(require,module,exports) {
+},{"react":17,"react-dom":16,"../side-nav/Nav":6,"../side-nav/NavGroup":5,"../side-nav/NavItem":8,"../side-nav/Link":7,"../side-nav/ExpandAllButton":9,"./index.scss":3}],69:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -18795,5 +18808,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[61,2])
+},{}]},{},[69,2])
 //# sourceMappingURL=/dist/abb802a7f188b8532c2feb79d99895ed.map
