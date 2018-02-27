@@ -4,6 +4,7 @@ import NavItem from "../NavItem";
 import ExpandAllButton from "../ExpandAllButton";
 import classNames from "classnames";
 import Cookies from 'js-cookie';
+import concat from 'unique-concat';
 
 import "./nav.scss";
 
@@ -30,7 +31,7 @@ class Nav extends React.Component {
           navItemIndex ++;
           if(location.pathname === childNavItem.props.path) {
             this.setState({
-              openedGroup: [child.props.index],
+              openedGroup: concat(this.state.openedGroup, [child.props.index]),
               selectedGroup: child.props.index,
               selectedNavItem: navItemIndex
             })

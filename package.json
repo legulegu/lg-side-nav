@@ -9,7 +9,8 @@
     "classnames": "^2.2.5",
     "js-cookie": "^2.2.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "unique-concat": "^0.2.2"
   },
   "devDependencies": {
     "node-sass": "^4.7.2",
