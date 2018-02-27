@@ -14,7 +14,7 @@ class App extends React.Component {
       <React.Fragment>
         <Nav className="customized-nav-container">
           <NavItem path="/stockdata">
-            <ButtonLink href="https://legulegu.com/stockdata" target="_blank">展开全部</ButtonLink>
+            <ButtonLink>展开全部</ButtonLink>
           </NavItem>
           <NavItem path="/stockdata">
             <Link href="https://legulegu.com/stockdata" target="_blank">量化投资概述</Link>

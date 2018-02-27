@@ -17,17 +17,17 @@ const NavGroup = props => {
   });
   return (
     <li
-      className={classNames("nav-group", props.className)}
+      className={classNames("lg-side-nav-group", props.className)}
       onClick={handleClick}
     >
       <i
         className={classNames({
-          "triangle-expanded": props.show,
-          "triangle-collapsed": !props.show
+          "lg-side-nav-triangle-expanded": props.show,
+          "lg-side-nav-triangle-collapsed": !props.show
         })}
       />
-      <div className="nav-group-title">{props.title}</div>
-      <ul className={classNames("nav-group-item", { show: props.show })}>
+      <div className="lg-side-nav-group-title">{props.title}</div>
+      <ul className={classNames("lg-side-nav-group-item", { show: props.show })}>
         {clonedChildren}
       </ul>
     </li>

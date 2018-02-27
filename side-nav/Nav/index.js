@@ -52,7 +52,7 @@ class Nav extends React.Component {
       }
     });
     return (
-      <ul className={classNames("nav", this.props.className)}>
+      <ul className={classNames("lg-side-nav", this.props.className)}>
         {clonedChildren}
       </ul>
     );

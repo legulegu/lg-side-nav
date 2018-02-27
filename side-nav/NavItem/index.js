@@ -9,7 +9,7 @@ const NavItem = props => {
   };
   return (
     <li
-      className={classNames("nav-item", props.className)}
+      className={classNames("lg-side-nav-item", props.className)}
       onClick={handleClick}
     >
       {props.children}

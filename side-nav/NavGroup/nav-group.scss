@@ -1,4 +1,4 @@
-.nav-group {
+.lg-side-nav-group {
   background-color: #e3edfa;
   line-height: 32px;
   color: #0277bd;
@@ -6,11 +6,11 @@
   position: relative;
 }
 
-.nav-group-title {
+.lg-side-nav-group-title {
   padding-left: 30px;
 }
 
-.nav-group-item {
+.lg-side-nav-group-item {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@
   display: block;
 }
 
-.triangle-collapsed {
+.lg-side-nav-triangle-collapsed {
   width: 0;
   height: 0;
   border-style: solid;
@@ -33,7 +33,7 @@
   left: 12px;
 }
 
-.triangle-expanded {
+.lg-side-nav-triangle-expanded {
   width: 0;
   height: 0;
   border-style: solid;

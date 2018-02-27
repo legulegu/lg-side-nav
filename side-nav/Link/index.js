@@ -6,7 +6,7 @@ const Link = props => {
   return (
     <a
       href={props.href}
-      className={classNames("link", props.className)}
+      className={classNames("lg-side-nav-link", props.className)}
       {...props}
     >
       {props.children}
