@@ -6,7 +6,7 @@ const ExpandAllButton = props => {
   return (
     <button
       onClick={props.handleExpandAllButtonClick}
-      className={classNames("expand-all-button", props.className)}
+      className={classNames("lg-side-nav-expand-all-button", props.className)}
       {...props}
     >
       {props.children}

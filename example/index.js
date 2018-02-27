@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Nav className="customized-nav-container">
-          <ExpandAllButton>展开全部</ExpandAllButton>
+          <ExpandAllButton>展开和收起全部</ExpandAllButton>
           <NavItem path="/stockdata">
             <Link href="https://legulegu.com/stockdata" target="_blank">量化投资概述</Link>
           </NavItem>
@@ -28,7 +28,7 @@ class App extends React.Component {
               <Link href="https://legulegu.com/stockdata/market-analysis-average-price" target="_blank">A股平均股价</Link>
             </NavItem>
           </NavGroup>
-          <NavGroup title="量化分析">
+          <NavGroup title="行情分析">
             <NavItem path="/stockdata/market-activity">
               <Link href="https://legulegu.com/stockdata/market-activity" target="_blank">赚钱效应分析</Link>
             </NavItem>
