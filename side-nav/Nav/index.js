@@ -20,6 +20,24 @@ class Nav extends React.Component {
     this.handleToggleExpandAllButtonClick = this.handleToggleExpandAllButtonClick.bind(this);
   }
 
+  componentDidMount() {
+    React.Children.forEach(this.clonedChildren, (child) => {
+      if(child.type === NavGroup) {
+        let navItemIndex = 0;
+        React.Children.forEach(child.props.children, (childNavItem) => {
+          navItemIndex ++;
+          if(location.pathname === childNavItem.props.path) {
+            this.setState({
+              openedGroup: [child.props.index],
+              selectedGroup: child.props.index,
+              selectedNavItem: navItemIndex
+            })
+          }
+        })
+      }
+    });
+  }
+
   handleOnNavGroupClick(e, index) {
     const openedGroup = Object.assign([], this.state.openedGroup);
     if (openedGroup.indexOf(index) > -1) {
@@ -46,7 +64,7 @@ class Nav extends React.Component {
   render() {
     let navGroupIndex = 0;
     let navItemIndex = 0;
-    const clonedChildren = React.Children.map(this.props.children, child => {
+    this.clonedChildren = React.Children.map(this.props.children, child => {
       if (child.type === NavGroup) {
         navGroupIndex++;
         return React.cloneElement(child, {
@@ -64,9 +82,7 @@ class Nav extends React.Component {
         return React.cloneElement(child, {
           groupIndex: -1,
           index: navItemIndex,
-          selected:
-            this.state.selectedGroup === 0 &&
-            this.state.selectedNavItem === navItemIndex,
+          selected: this.state.selectedGroup === 0 && this.state.selectedNavItem === navItemIndex,
           handleNavItemClick: this.handleNavItemClick
         });
       }
@@ -79,7 +95,7 @@ class Nav extends React.Component {
     });
     return (
       <ul className={classNames("lg-side-nav", this.props.className)}>
-        {clonedChildren}
+        {this.clonedChildren}
       </ul>
     );
   }
