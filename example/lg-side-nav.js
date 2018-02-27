@@ -6,13 +6,25 @@ import NavItem from "../side-nav/NavItem";
 import Link from "../side-nav/Link";
 import ExpandAllButton from "../side-nav/ExpandAllButton";
 
+import Cookies from 'js-cookie';
+
 import "./index.scss";
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = Cookies.getJSON('state') || {};
+  }
   render() {
+    const { openedGroup, selectedGroup, selectedNavItem, expandAll } = this.state;
     return (
       <React.Fragment>
-        <Nav className="customized-nav-container">
+        <Nav className="customized-nav-container" 
+             openedGroup={openedGroup}
+             selectedGroup={selectedGroup}
+             selectedNavItem={selectedNavItem}
+             expandAll={expandAll}
+        >
           <ExpandAllButton/>
           <NavItem path="/stockdata">
             <Link href="/stockdata" target="_blank">量化投资概述</Link>

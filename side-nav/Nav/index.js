@@ -3,10 +3,12 @@ import NavGroup from "../NavGroup";
 import NavItem from "../NavItem";
 import ExpandAllButton from "../ExpandAllButton";
 import classNames from "classnames";
+import Cookies from 'js-cookie';
 
 import "./nav.scss";
 
 class Nav extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -36,6 +38,10 @@ class Nav extends React.Component {
         })
       }
     });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    Cookies.set('state', this.state);
   }
 
   handleOnNavGroupClick(e, index) {
