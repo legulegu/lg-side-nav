@@ -85,13 +85,13 @@ class App extends React.Component {
             <NavItem path="/stockdata/shanghaiPB">
               <Link href="/stockdata/shanghaiPB" target="_blank">上证A股市净率</Link>
             </NavItem>
-            <NavItem path="/stockdata/shenzhenPE">
+            <NavItem path="/stockdata/shenzhenPB">
               <Link href="/stockdata/shenzhenPB" target="_blank">深圳A股市净率</Link>
             </NavItem>
-            <NavItem path="/stockdata/zxbPE">
+            <NavItem path="/stockdata/zxbPB">
               <Link href="/stockdata/zxbPB" target="_blank">中小板市净率</Link>
             </NavItem>
-            <NavItem path="/stockdata/cybPE">
+            <NavItem path="/stockdata/cybPB">
               <Link href="/stockdata/cybPB" target="_blank">创业板市净率</Link>
             </NavItem>
           </NavGroup>
@@ -100,7 +100,10 @@ class App extends React.Component {
               <Link href="/stockdata/guxilv" target="_blank">A股股息率统计</Link>
             </NavItem>
             <NavItem path="/stockdata/companynum">
-              <Link href="/stockdata/shanghaiPB" target="_blank">A股上市公司家数</Link>
+              <Link href="/stockdata/companynum" target="_blank">A股上市公司家数</Link>
+            </NavItem>
+            <NavItem path="/stockdata/shenzhenguben">
+              <Link href="/stockdata/shenzhenguben" target="_blank">深圳A股总股本</Link>
             </NavItem>
           </NavGroup>
           <NavGroup title="宏观数据">
@@ -118,7 +121,7 @@ class App extends React.Component {
             <NavItem path="/stockdata/averageposition">
               <Link href="/stockdata/averageposition" target="_blank">仓位数据</Link>
             </NavItem>
-            <NavItem path="/stockdata/broadmoney">
+            <NavItem path="/stockdata/a_shares_new_account">
               <Link href="/stockdata/a_shares_new_account" target="_blank">新增开户数</Link>
             </NavItem>
           </NavGroup>
