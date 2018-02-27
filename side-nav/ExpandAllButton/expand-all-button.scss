@@ -7,7 +7,13 @@
   outline: none;
   font-size: 14px;
   cursor: pointer;
-  background-color: #2F81B7;
+  background-color: #2f81b7;
   color: white;
   line-height: 32px;
+}
+
+.lg-side-nav-expand-all-button-icon-plus,
+.lg-side-nav-expand-all-button-icon-minus {
+  float: right;
+  margin-right: 10px;
 }

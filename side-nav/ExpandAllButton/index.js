@@ -8,7 +8,15 @@ const ExpandAllButton = props => {
       onClick={props.handleToggleExpandAllButtonClick}
       className={classNames("lg-side-nav-expand-all-button", props.className)}
     >
-      {props.expandAll ? "收起全部" : "展开全部"}
+      {props.expandAll ? (
+        <React.Fragment>
+          收起全部 <span className="lg-side-nav-expand-all-button-icon-minus">-</span>
+        </React.Fragment>
+      ) : (
+        <React.Fragment>
+          展开全部 <span className="lg-side-nav-expand-all-button-icon-plus">+</span>
+        </React.Fragment>
+      )}
     </button>
   );
 };
