@@ -106,9 +106,6 @@ class App extends React.Component {
             <NavItem path="/stockdata/averageposition">
               <Link href="https://legulegu.com/stockdata/averageposition" target="_blank">仓位数据</Link>
             </NavItem>
-            <NavItem path="/stockdata/m1m2">
-              <Link href="https://legulegu.com/stockdata/m1m2" target="_blank">M1M2走势图</Link>
-            </NavItem>
             <NavItem path="/stockdata/broadmoney">
               <Link href="https://legulegu.com/stockdata/a_shares_new_account" target="_blank">新增开户数</Link>
             </NavItem>
