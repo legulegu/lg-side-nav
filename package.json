@@ -21,6 +21,7 @@
     "babel-preset-react-app": "^3.1.1"
   },
   "scripts": {
-    "dev": "parcel ./example/index.html"
+    "dev": "parcel example/index.html",
+    "build": "parcel build example/lg-side-nav.js -d build"
   }
 }
