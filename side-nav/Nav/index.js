@@ -72,7 +72,8 @@ class Nav extends React.Component {
       }
       if (child.type === ExpandAllButton) {
         return React.cloneElement(child, {
-          onClick: this.handleToggleExpandAllButtonClick
+          handleToggleExpandAllButtonClick: this.handleToggleExpandAllButtonClick,
+          expandAll: this.state.expandAll
         });
       }
     });

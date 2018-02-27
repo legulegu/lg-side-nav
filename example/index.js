@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Nav className="customized-nav-container">
-          <ExpandAllButton>展开和收起全部</ExpandAllButton>
+          <ExpandAllButton/>
           <NavItem path="/stockdata">
             <Link href="https://legulegu.com/stockdata" target="_blank">量化投资概述</Link>
           </NavItem>

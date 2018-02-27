@@ -5,11 +5,10 @@ import "./expand-all-button.scss";
 const ExpandAllButton = props => {
   return (
     <button
-      onClick={props.handleExpandAllButtonClick}
+      onClick={props.handleToggleExpandAllButtonClick}
       className={classNames("lg-side-nav-expand-all-button", props.className)}
-      {...props}
     >
-      {props.children}
+      {props.expandAll ? "收起全部" : "展开全部"}
     </button>
   );
 };
