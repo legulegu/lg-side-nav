@@ -12,6 +12,7 @@ const NavGroup = props => {
     return React.cloneElement(child, {
       groupIndex: props.index,
       index: navItemIndex,
+      selected: props.selectedGroup === props.index && props.selectedNavItem === navItemIndex,
       handleNavItemClick: props.handleNavItemClick
     });
   });

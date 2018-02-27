@@ -46,6 +46,8 @@ class Nav extends React.Component {
           index: navGroupIndex,
           show: this.state.openedGroup === navGroupIndex,
           expandAll: this.state.expandAll,
+          selectedGroup: this.state.selectedGroup,
+          selectedNavItem: this.state.selectedNavItem,
           handleOnNavGroupClick: this.handleOnNavGroupClick,
           handleNavItemClick: this.handleNavItemClick
         });
@@ -55,6 +57,7 @@ class Nav extends React.Component {
         return React.cloneElement(child, {
           groupIndex: 0,
           index: navItemIndex,
+          selected: this.state.selectedGroup === 0 && this.state.selectedNavItem === navItemIndex,
           handleNavItemClick: this.handleNavItemClick
         });
       }
