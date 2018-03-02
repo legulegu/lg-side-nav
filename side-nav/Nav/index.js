@@ -8,12 +8,14 @@ import concat from 'unique-concat';
 
 import "./nav.scss";
 
+const ALL_GROUP = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 class Nav extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      openedGroup: props.openedGroup,
+      openedGroup: props.expandAll ? ALL_GROUP : props.openedGroup,
       selectedGroup: props.selectedGroup,
       selectedNavItem: props.selectedNavItem,
       expandAll: props.expandAll
@@ -63,7 +65,7 @@ class Nav extends React.Component {
     if (this.state.expandAll) {
       this.setState({ openedGroup: [] });
     } else {
-      this.setState({ openedGroup: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] });
+      this.setState({ openedGroup: ALL_GROUP });
     }
     this.setState({ expandAll: !this.state.expandAll });
   }

@@ -23,7 +23,7 @@ class App extends React.Component {
              openedGroup={openedGroup}
              selectedGroup={selectedGroup}
              selectedNavItem={selectedNavItem}
-             expandAll={expandAll}
+             expandAll={openedGroup ? false : true}
         >
           <ExpandAllButton/>
           <NavItem path="/stockdata">
