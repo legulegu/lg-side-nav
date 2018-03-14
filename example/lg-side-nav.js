@@ -10,7 +10,7 @@ import Cookies from "js-cookie";
 
 import "./index.scss";
 
-const ALL_GROUP = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const ALL_GROUP = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 class App extends React.Component {
   constructor(props) {
@@ -92,6 +92,28 @@ class App extends React.Component {
             <NavItem path="/stockdata/cybPE">
               <Link href="/stockdata/cybPE" target="_blank">
                 创业板市盈率
+              </Link>
+            </NavItem>
+          </NavGroup>
+          <NavGroup title="A股指数市盈率">
+            <NavItem path="/stockdata/sz50-ttm-lyr">
+              <Link href="/stockdata/sz50-ttm-lyr" target="_blank">
+                上证50市盈率
+              </Link>
+            </NavItem>
+            <NavItem path="/stockdata/hs300-ttm-lyr">
+              <Link href="/stockdata/hs300-ttm-lyr" target="_blank">
+                沪深300市盈率
+              </Link>
+            </NavItem>
+            <NavItem path="/stockdata/zzlt-ttm-lyr">
+              <Link href="/stockdata/zzlt-ttm-lyr" target="_blank">
+                全流通A股市盈率
+              </Link>
+            </NavItem>
+            <NavItem path="/stockdata/zz500-ttm-lyr">
+              <Link href="/stockdata/zz500-ttm-lyr" target="_blank">
+                中证500市盈率
               </Link>
             </NavItem>
           </NavGroup>
