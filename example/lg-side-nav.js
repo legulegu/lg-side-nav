@@ -108,7 +108,7 @@ class App extends React.Component {
             </NavItem>
             <NavItem path="/stockdata/zzlt-ttm-lyr">
               <Link href="/stockdata/zzlt-ttm-lyr" target="_blank">
-                全流通A股市盈率
+                中证流通市盈率
               </Link>
             </NavItem>
             <NavItem path="/stockdata/zz500-ttm-lyr">
