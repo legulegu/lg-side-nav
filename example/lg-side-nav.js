@@ -116,6 +116,11 @@ class App extends React.Component {
                 中证500市盈率
               </Link>
             </NavItem>
+            <NavItem path="/stockdata/indices">
+              <Link href="/stockdata/indices" target="_blank">
+                更多指数动态
+              </Link>
+            </NavItem>
           </NavGroup>
           <NavGroup title="港股市盈率">
             <NavItem path="/stockdata/market/hsi">
