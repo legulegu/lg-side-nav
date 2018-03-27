@@ -118,7 +118,7 @@ class App extends React.Component {
             </NavItem>
             <NavItem path="/stockdata/indices">
               <Link href="/stockdata/indices" target="_blank">
-                更多指数动态
+                更多指数
               </Link>
             </NavItem>
           </NavGroup>
@@ -170,6 +170,33 @@ class App extends React.Component {
             <NavItem path="/stockdata/cybPB">
               <Link href="/stockdata/cybPB" target="_blank">
                 创业板市净率
+              </Link>
+            </NavItem>
+          </NavGroup>
+          <NavGroup title="A股指数市净率">
+            <NavItem path="/stockdata/sz50-pb">
+              <Link href="/stockdata/sz50-pb" target="_blank">
+                上证50市净率
+              </Link>
+            </NavItem>
+            <NavItem path="/stockdata/hs300-pb">
+              <Link href="/stockdata/hs300-pb" target="_blank">
+                沪深300市净率
+              </Link>
+            </NavItem>
+            <NavItem path="/stockdata/zzlt-pb">
+              <Link href="/stockdata/zzlt-pb" target="_blank">
+                中证流通市净率
+              </Link>
+            </NavItem>
+            <NavItem path="/stockdata/zz500-pb">
+              <Link href="/stockdata/zz500-pb" target="_blank">
+                中证500市净率
+              </Link>
+            </NavItem>
+            <NavItem path="/stockdata/indices">
+              <Link href="/stockdata/indices" target="_blank">
+                更多指数
               </Link>
             </NavItem>
           </NavGroup>
